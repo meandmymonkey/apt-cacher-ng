@@ -10,6 +10,4 @@ EXPOSE 3142
 VOLUME /var/cache/apt-cacher-ng
 VOLUME /var/log/apt-cacher-ng
 
-ENTRYPOINT ["/usr/sbin/apt-cacher-ng"]
-
-CMD ["ForeGround=1"]
+CMD ["/usr/sbin/apt-cacher-ng ForeGround=1"]
