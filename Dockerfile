@@ -9,4 +9,7 @@ RUN \
 EXPOSE 3142
 VOLUME /var/cache/apt-cacher-ng
 
-ENTRYPOINT ["/usr/sbin/apt-cacher-ng", "ForeGround=1"]
+CMD \
+    chmod 777 /var/cache/apt-cacher-ng && \
+    /etc/init.d/apt-cacher-ng start && \
+    tail -f /var/log/apt-cacher-ng/*
