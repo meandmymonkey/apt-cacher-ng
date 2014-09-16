@@ -7,5 +7,6 @@ RUN \
     apt-get install -y apt-cacher-ng
 
 EXPOSE 3142
+VOLUME /var/cache/apt-cacher-ng
 
-CMD ["/usr/sbin/apt-cacher-ng", "ForeGround=1"]
+ENTRYPOINT ["/usr/sbin/apt-cacher-ng", "ForeGround=1"]
